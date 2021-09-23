@@ -24,8 +24,6 @@ lower_bound = -10 * ones(pop_per_group, cost_func_dim);
 alpha = 0.8; % the exploitation rate
 
 %% initialization
-group_best_cost_value_for_all_iters = inf*ones(num_of_group,1);
-
 cost_value = zeros([num_of_group, size(upper_bound)]);
 for k = 1:num_of_group
     cost_value(k,:,:) = (upper_bound - lower_bound).*rand(size(upper_bound))+lower_bound;
